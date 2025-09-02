@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-white text-neutral-900 antialiased;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.container-page {
+  @apply w-full;
+}
+
+.content-wrap {
+  @apply px-[7%];
+}
+
+/* Top Banner Scrolling Animation */
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-right-to-left {
+  animation: scroll-right-to-left 20s linear infinite;
+}
+
+/* Hide scrollbar while maintaining scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
